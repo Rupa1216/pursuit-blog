@@ -10,14 +10,12 @@ CREATE TABLE users (
   password VARCHAR (250) NOT NULL,
   token VARCHAR (16)
 );
-
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
   author INT REFERENCES users(id) NOT NULL,
   title VARCHAR (100) NOT NULL,
   body TEXT NOT NULL
 );
-
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   author INT REFERENCES users(id) NOT NULL,
@@ -27,7 +25,11 @@ CREATE TABLE comments (
 );
 
 INSERT INTO users (username, email, password) VALUES
-('John', 'john@email.com', 'abc'), ('Michelle', 'michelle@email.com', 'def');
+(John', 'john@email.com', 'abc'), ('Michelle', 'michelle@email.com', 'def');
 
-INSERT INTO posts (author, title, body) VALUES
-(1, 'bunny', 'Marshmello'), (2, 'dog', 'Chai'), (1, 'cat', 'Pixel');
+-- INSERT INTO posts (author, title, body) VALUES
+-- ('John', 'Cooking', 'afhdkdhv'), ('', ''), (1, '', '');
+
+-- INSERT INTO comments (
+
+-- )
