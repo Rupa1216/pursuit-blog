@@ -10,12 +10,14 @@ CREATE TABLE users (
   password VARCHAR (250) NOT NULL,
   token VARCHAR (16)
 );
+
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
   author INT REFERENCES users(id) NOT NULL,
   title VARCHAR (100) NOT NULL,
   body TEXT NOT NULL
 );
+
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   author INT REFERENCES users(id) NOT NULL,
